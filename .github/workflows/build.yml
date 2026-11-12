@@ -25,7 +25,7 @@ jobs:
           cd $GITHUB_WORKSPACE/tree/prebuilt && gunzip -k kernel.gz && mv kernel.gz /tmp/ && tar xzf modules.tar.gz && rm modules.tar.gz
           mkdir -p ~/twrp/device/infinix && cp -r $GITHUB_WORKSPACE/tree ~/twrp/device/infinix/X6725
           cd ~/twrp && source build/envsetup.sh
-          lunch twrp_X6725-ap1a-eng
+          lunch twrp_X6725-ap2a-eng
           mka adbd vendorbootimage -j$(nproc)
       - uses: actions/upload-artifact@v4
         with:
